@@ -7,30 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<header class="navbar navbar-fixed-top navbar-default ">
-		<div class="container">
-			<%= link_to "myRecipes", "", class: "btn btn-lg btn-success", id: "logo" %>
+ 	<%= render 'layouts/navigation' %>
 
-			<div class="nav_item">
-				<%= link_to "Link 1", "", class: "btn btn-default btn-warning" %>
-			</div>
+	<div class="container">
+		<%= yield %>
 
-			<div class="nav_item">
-				<%= link_to "Link 1", "", class: "btn btn-default btn-warning" %>
-			</div>
-
-			<div class="nav_item">
-				<%= link_to "Link 1", "", class: "btn btn-default btn-warning" %>
-			</div>
-
-		</div>
-	</header>
-
-<div class="container">
-	<%= yield %>
-	<div class="footer">
-		<p>&copy; Chef Lopez Recipe List</p>
+		<%= render 'layouts/footer' %>
 	</div>
-</div>
 </body>
 </html>
