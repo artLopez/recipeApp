@@ -4,6 +4,14 @@ class Recipe < ActiveRecord::Base
 	validates :name, presence: true, length: {minimum: 5, maximum: 100}
 	validates :summary, presence: true, length: {minimum: 10, maximum: 150}
 	validates :description, presence: true, length: {minimum: 20, maximum: 200}
+	mount_uploader :picture, PictureUploader
+	validates :picture_size
 
+	private
 
+		def picture_size
+			if picture_size > 5.megabytes
+				errors.add(:picture, 'Picture must be less than 5MB')
+			end
+		end
 end
