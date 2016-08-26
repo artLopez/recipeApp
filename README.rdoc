@@ -11,7 +11,7 @@ description must be present - 20 - 500 characters
 chef_id must be present
 
 
-testing specs for chef:
+Testing specs for chef:
 
 chefname: string
 email: string
@@ -21,3 +21,21 @@ chefname must be between 3 and 40 characters
 email must be present
 email must be unique
 email must be valid
+
+Chefs:
+
+What we have already:
+- Chef model and validations
+- chefs table with colums chefname and email
+
+What we need to do:
+- add passwords to the chefs table so chefs can be authenticated and logged in 
+- use email as login credentaials, since email is uniquee
+- ability to register new chefs to use the app
+- ability to display chefs profile
+- ability to list cchefs using the app
+- ability for cehfs to login and logout of the app
+- restrict actions like create recipe, edit recipe, and like feature to logged in chefs 
+- restrict edit of recipes by chefs who created the recipes
+- 
+- 
